@@ -12,5 +12,8 @@
                 </div>
             </a>
         @endforeach
+        <div>
+            {{ $jobs->onEachSide(2)->links() }}
+        </div>
     </div>
 </x-layout>
