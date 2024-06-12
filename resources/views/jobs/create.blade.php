@@ -19,8 +19,11 @@
                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                                 <input type="text" name="title" id="title"
                                        class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                                       placeholder="Job Title">
+                                       placeholder="Job Title" required value="{{ old('title') }}">
                             </div>
+                            @error('title')
+                            <p class=" mt-2 text-sx text-red-500 font-semibold">{{$message}}</p>
+                            @enderror
                         </div>
                     </div>
 
@@ -31,11 +34,23 @@
                                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                                 <input type="text" name="salary" id="salary"
                                        class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                                       placeholder="$35,000">
+                                       placeholder="$35,000" required value="{{ old('salary') }}">
                             </div>
+                            @error('salary')
+                            <p class=" mt-2 text-sx text-red-500 font-semibold">{{$message}}</p>
+                            @enderror
                         </div>
                     </div>
                 </div>
+
+
+                {{--                @if($errors->any())--}}
+                {{--                    <ul>--}}
+                {{--                        @foreach($errors->all() as $error)--}}
+                {{--                            <li>{{$error}}</li>--}}
+                {{--                        @endforeach--}}
+                {{--                    </ul>--}}
+                {{--                @endif--}}
             </div>
 
         </div>
