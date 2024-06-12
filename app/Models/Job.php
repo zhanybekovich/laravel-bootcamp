@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Support\Arr;
 
-
 class Job
 {
     public static function all(): array
