@@ -70,7 +70,7 @@
                                 name="password_confirmation"
                                 id="password_confirmation"
                                 required
-                                type="password_confirmation"
+                                type="password"
                             />
                             <x-form-error name="password_confirmation"/>
                         </div>

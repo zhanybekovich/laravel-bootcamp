@@ -15,9 +15,10 @@
                             <x-form-input
                                 name="email"
                                 id="email"
-                                placeholder="Doe"
+                                placeholder="your@email.com"
                                 required
                                 type="email"
+                                :value="old('email')"
                             />
                             <x-form-error name="email"/>
                         </div>
